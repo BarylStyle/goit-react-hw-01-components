@@ -1,0 +1,45 @@
+.statistics {
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-list {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.percentage {
+    font-size: 16px;
+}
+
+/* Kolorowe tła dla kwadratów w zależności od indeksu */
+.item:nth-child(odd) {
+    background-color: #63a4ff;
+    /* Niebieski */
+}
+
+.item:nth-child(even) {
+    background-color: #8bc34a;
+    /* Zielony */
+}
