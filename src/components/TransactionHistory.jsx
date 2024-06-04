@@ -16,7 +16,7 @@ const TransactionHistory = ({ items }) => {
         {items.map(item => (
           <tr key={item.id}>
             <td>{item.type}</td>
-            <td>{item.amount}</td>
+            <td>{parseFloat(item.amount)}</td>
             <td>{item.currency}</td>
           </tr>
         ))}
@@ -28,11 +28,11 @@ const TransactionHistory = ({ items }) => {
 TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       type: PropTypes.string,
-      amount: PropTypes.number,
+      amount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       currency: PropTypes.string,
-    })
+    }),
   ),
 };
 
